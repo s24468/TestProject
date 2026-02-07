@@ -15,6 +15,8 @@ public class PlayerInteractor : MonoBehaviour
     [Header("Camera Control")] [SerializeField]
     private Transform rayOrigin;
 
+    [Header("UI")] [SerializeField] private TextMeshProUGUI interactedNameObject;
+
     private InteractableBase current;
 
     void Update()
@@ -33,6 +35,20 @@ public class PlayerInteractor : MonoBehaviour
             current = newTarget;
             if (current != null) current.FocusEnter();
         }
+        
+        // UI prompt
+        if (interactedNameObject != null)
+        {
+            if (current != null)
+            {
+                string prompt = current.Name;
+                interactedNameObject.text = prompt;
+            }
+            else
+            {
+                interactedNameObject.text = "";
+            }
+        }
 
         if (newTarget != null && newTarget != current)
         {
@@ -44,7 +60,7 @@ public class PlayerInteractor : MonoBehaviour
             pointer.color = (current != null) ? interactColor : defaultColor;
         }
     }
-    
+
     public void OnInteract()
     {
         if (current != null)
