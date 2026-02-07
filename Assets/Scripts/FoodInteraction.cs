@@ -10,8 +10,7 @@ namespace DefaultNamespace
         {
             //ToDo ukryta zależność (Food nie mówi, że potrzebuje PlayerStats)
             PlayerStats stats = FindFirstObjectByType<PlayerStats>();
-            stats.AddHunger(healthGain);
-            Debug.Log($"{Name} has been eaten!");
+            stats.AddHunger(healthGain, Name);
             Destroy(gameObject);
         }
     }
