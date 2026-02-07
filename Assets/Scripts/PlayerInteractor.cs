@@ -44,4 +44,10 @@ public class PlayerInteractor : MonoBehaviour
             pointer.color = (current != null) ? interactColor : defaultColor;
         }
     }
+    
+    public void OnInteract()
+    {
+        if (current != null)
+            current.Interact();
+    }
 }
