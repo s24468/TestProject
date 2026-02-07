@@ -18,7 +18,6 @@ namespace DefaultNamespace
         private bool _isFocused = false;
 
         protected abstract void PerformInteract();
-
         public void FocusEnter()
         {
             if (_isFocused)
