@@ -21,6 +21,11 @@ public class PlayerInteractor : MonoBehaviour
 
     void Update()
     {
+        RaycastingCheck();
+    }
+
+    private void RaycastingCheck()
+    {
         InteractableBase newTarget = null;
         Ray ray = new Ray(rayOrigin.position, rayOrigin.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactLayer))
@@ -29,14 +34,30 @@ public class PlayerInteractor : MonoBehaviour
             Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.red);
         }
 
+        EventsInteraction(newTarget);
+
+        UIInteraction();
+    }
+
+    private void EventsInteraction(InteractableBase newTarget)
+    {
         if (newTarget != current)
         {
-            if (current != null) current.FocusExit();
+            if (current != null)
+            {
+                current.FocusExit();
+            }
+
             current = newTarget;
-            if (current != null) current.FocusEnter();
+            if (current != null)
+            {
+                current.FocusEnter();
+            }
         }
-        
-        // UI prompt
+    }
+
+    private void UIInteraction()
+    {
         if (interactedNameObject != null)
         {
             if (current != null)
@@ -48,11 +69,6 @@ public class PlayerInteractor : MonoBehaviour
             {
                 interactedNameObject.text = "";
             }
-        }
-
-        if (newTarget != null && newTarget != current)
-        {
-            current = newTarget;
         }
 
         if (pointer != null)
