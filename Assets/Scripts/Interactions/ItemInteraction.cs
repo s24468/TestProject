@@ -1,6 +1,7 @@
+using EventsForListening;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Interactions
 {
     public class ItemInteraction : InteractableBase
     {
@@ -8,6 +9,16 @@ namespace DefaultNamespace
         {
             ItemEvents.RaisePickUpItem(Name);
             Destroy(gameObject);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponentInParent<PlayerInteractor>() == null)
+            {
+                return;
+            }
+
+            PerformInteract();
         }
     }
 }

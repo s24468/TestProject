@@ -1,4 +1,4 @@
-using DefaultNamespace;
+using Interactions;
 using DG.Tweening;
 using UnityEngine;
 
@@ -34,6 +34,6 @@ public class DoorInteraction : InteractableBase
             .DORotateQuaternion(target, openCloseDuration)
             .SetEase(ease);
 
-        Debug.Log(isOpen ? "Otwarto drzwi" : "Zamknięto drzwi");
+        Debug.Log(isOpen ? "Door Opened" : "Door closed");
     }
 }

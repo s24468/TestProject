@@ -1,11 +1,14 @@
 using System;
 
-public static class FoodEvents
+namespace EventsForListening
 {
-    public static event Action<int, string> OnFoodEaten;
-
-    public static void RaiseFoodEaten(int hungerGain, string foodName)
+    public static class FoodEvents
     {
-        OnFoodEaten?.Invoke(hungerGain, foodName);
+        public static event Action<int, string> OnFoodEaten;
+
+        public static void RaiseFoodEaten(int hungerGain, string foodName)
+        {
+            OnFoodEaten?.Invoke(hungerGain, foodName);
+        }
     }
 }

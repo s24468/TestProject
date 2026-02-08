@@ -1,12 +1,14 @@
 using System;
-using UnityEngine;
 
-public static class ItemEvents
+namespace EventsForListening
 {
-    public static event Action<string> OnPickUpItem;
-
-    public static void RaisePickUpItem(string item)
+    public static class ItemEvents
     {
-        OnPickUpItem?.Invoke(item);
+        public static event Action<string> OnPickUpItem;
+
+        public static void RaisePickUpItem(string item)
+        {
+            OnPickUpItem?.Invoke(item);
+        }
     }
 }

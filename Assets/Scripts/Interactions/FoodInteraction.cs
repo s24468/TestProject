@@ -1,6 +1,7 @@
+using EventsForListening;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Interactions
 {
     public class FoodInteraction : InteractableBase
     {

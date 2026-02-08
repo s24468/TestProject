@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
-using DefaultNamespace.Player;
+using EventsForListening;
+using Interactions.Player;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;

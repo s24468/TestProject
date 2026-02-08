@@ -1,4 +1,4 @@
-using DefaultNamespace;
+using Interactions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

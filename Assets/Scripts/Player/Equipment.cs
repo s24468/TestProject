@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using EventsForListening;
 using UnityEngine;
 
 public class Equipment : MonoBehaviour
@@ -10,12 +11,13 @@ public class Equipment : MonoBehaviour
 
     private void Awake()
     {
-        equipmentUI.UpdateItemsUI(items);
+        equipmentUI.InitializeUI(items);
     }
 
     private void PickUpItem(string item)
     {
         AddItem(item);
+        equipmentUI.ShootMessage(item);
         equipmentUI.UpdateItemsUI(items);
     }
     

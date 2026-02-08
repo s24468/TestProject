@@ -1,11 +1,13 @@
-using DefaultNamespace;
 using DG.Tweening;
 using UnityEngine;
 
-public class NPCInteraction : InteractableBase
+namespace Interactions
 {
-    protected override void PerformInteract()
+    public class NPCInteraction : InteractableBase
     {
-        Debug.Log($"I am {Name}");
+        protected override void PerformInteract()
+        {
+            Debug.Log($"I am {Name}");
+        }
     }
 }
