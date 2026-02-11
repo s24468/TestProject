@@ -83,4 +83,5 @@ public class PlayerInteractor : MonoBehaviour
         if (current != null)
             current.Interact();
     }
+    
 }
