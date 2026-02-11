@@ -31,6 +31,7 @@ public class PlayerInteractor : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactLayer))
         {
             newTarget = hit.collider.GetComponentInParent<InteractableBase>();
+
             Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.red);
         }
 
