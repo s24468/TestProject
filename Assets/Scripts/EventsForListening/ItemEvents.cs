@@ -1,12 +1,13 @@
 using System;
+using Interactions;
 
 namespace EventsForListening
 {
     public static class ItemEvents
     {
-        public static event Action<string> OnPickUpItem;
+        public static event Action<ItemData> OnPickUpItem;
 
-        public static void RaisePickUpItem(string item)
+        public static void RaisePickUpItem(ItemData item)
         {
             OnPickUpItem?.Invoke(item);
         }

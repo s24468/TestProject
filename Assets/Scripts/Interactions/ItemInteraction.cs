@@ -25,7 +25,7 @@ namespace Interactions
 
         protected override void PerformInteract()
         {
-            ItemEvents.RaisePickUpItem(interactionData.displayName);
+            ItemEvents.RaisePickUpItem(interactionData as ItemData);
             Destroy(gameObject);
         }
 

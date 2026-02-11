@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Bob
   m_EditorClassIdentifier: Assembly-CSharp::Interactions.NPCData
   displayName: Bob
+  health: 30

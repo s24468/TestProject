@@ -1,9 +1,18 @@
+using System;
 using DefaultNamespace;
+using Interactions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class EnemyStats : MonoBehaviour, IDamageable
 {
-    public int health = 100;
+    public NPCData npcData;
+    public int health;
+
+    private void Awake()
+    {
+        health = npcData.health;
+    }
 
     public void TakeDamage(int amount)
     {
