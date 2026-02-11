@@ -26,30 +26,30 @@ public class PlayerInteractor : MonoBehaviour
 
     private void RaycastingCheck()
     {
-        InteractableBase newTarget = null;
+        InteractableBase target = null;
         Ray ray = new Ray(rayOrigin.position, rayOrigin.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, interactDistance, interactLayer))
         {
-            newTarget = hit.collider.GetComponentInParent<InteractableBase>();
+            target = hit.collider.GetComponentInParent<InteractableBase>();
 
             Debug.DrawRay(transform.position, transform.forward * interactDistance, Color.red);
         }
 
-        EventsInteraction(newTarget);
+        EventsInteraction(target);
 
         UIInteraction();
     }
 
-    private void EventsInteraction(InteractableBase newTarget)
+    private void EventsInteraction(InteractableBase target)
     {
-        if (newTarget != current)
+        if (target != current)
         {
             if (current != null)
             {
                 current.FocusExit();
             }
 
-            current = newTarget;
+            current = target;
             if (current != null)
             {
                 current.FocusEnter();
@@ -63,7 +63,7 @@ public class PlayerInteractor : MonoBehaviour
         {
             if (current != null)
             {
-                string prompt = current.Name;
+                string prompt = current.interactionData.displayName;
                 interactedNameObject.text = prompt;
             }
             else

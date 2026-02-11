@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacc7aae28024351b576a2f67e825a5a, type: 3}
+  m_Name: Hamburger
+  m_EditorClassIdentifier: Assembly-CSharp::Interactions.FoodItemData
+  itemId: 003
+  displayName: Hamburger
+  mesh: {fileID: -7147683204532785779, guid: d4e78d4a274642a43b984afeaf92aba6, type: 3}
+  materials:
+  - {fileID: 2423508529968397582, guid: d4e78d4a274642a43b984afeaf92aba6, type: 3}
+  visualScale: {x: 1, y: 1, z: 1}
+  colliderCenter: {x: 0, y: -0.024, z: 0}
+  colliderSize: {x: 0.234, y: 0.177, z: 0.239}
+  icon: {fileID: 0}
+  hungerGain: 30

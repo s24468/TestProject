@@ -45,19 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c180178c6bd6ab4e811043997d1fdbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Name: Door
+  interactionData: {fileID: 11400000, guid: 5ca661b910fee1b4bbdcb9a60a240ff6, type: 2}
   isEnabled: 1
-  OnFocusEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFocusExit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInteracted:
-    m_PersistentCalls:
-      m_Calls: []
   openAngle: 90
   openCloseSpeed: 6
+  openCloseDuration: 0.6
+  ease: 6
+  meshRenderer: {fileID: 3340225560895708687}
 --- !u!1 &2244807711282750632
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,8 +118,7 @@ MeshRenderer:
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0311ec04169874a4987cf6a427ae7ac4, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

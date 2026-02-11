@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6293908239994068782
+--- !u!1 &4058401214584011679
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6634827674683458964}
-  - component: {fileID: 7763219544000121393}
-  - component: {fileID: 5501296764758507259}
-  - component: {fileID: 8752632388467266301}
-  - component: {fileID: -5352376209623010025}
+  - component: {fileID: 7449401527456698556}
+  - component: {fileID: 5982073972738873001}
+  - component: {fileID: 2163512743507623660}
+  - component: {fileID: 2283451299951171039}
+  - component: {fileID: 8525228133321380398}
   m_Layer: 3
-  m_Name: Pot
+  m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6634827674683458964
+--- !u!4 &7449401527456698556
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293908239994068782}
+  m_GameObject: {fileID: 4058401214584011679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.0674515, y: 0.24199998, z: 8.685}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7763219544000121393
+--- !u!33 &5982073972738873001
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293908239994068782}
+  m_GameObject: {fileID: 4058401214584011679}
   m_Mesh: {fileID: -8517725900640002782, guid: 1e1d12455ed3cf6499d462cf7f484af7, type: 3}
---- !u!23 &5501296764758507259
+--- !u!23 &2163512743507623660
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293908239994068782}
+  m_GameObject: {fileID: 4058401214584011679}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6309423400349450919, guid: 1e1d12455ed3cf6499d462cf7f484af7, type: 3}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,13 +91,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8752632388467266301
+--- !u!114 &2283451299951171039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058401214584011679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4964512f27c5490a8de5a0fed4549da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactions.NewItemInteraction
+  interactionData: {fileID: 0}
+  isEnabled: 1
+  meshFilter: {fileID: 5982073972738873001}
+  meshRenderer: {fileID: 2163512743507623660}
+  bocCollider: {fileID: 8525228133321380398}
+--- !u!65 &8525228133321380398
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293908239994068782}
+  m_GameObject: {fileID: 4058401214584011679}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -110,28 +127,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.57348067, y: 0.33062515, z: 0.4834383}
-  m_Center: {x: 0, y: 0.1684546, z: -0.000000007450581}
---- !u!114 &-5352376209623010025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6293908239994068782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69fe3674a9fc46a2bf5d61dc2e9d4ab2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.ItemInteraction
-  Name: Pot
-  isEnabled: 1
-  OnFocusEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFocusExit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInteracted:
-    m_PersistentCalls:
-      m_Calls: []
+  m_Size: {x: 0.573, y: 0.33, z: 0.484}
+  m_Center: {x: 0, y: 0.17, z: 0}

@@ -7,7 +7,7 @@ namespace Interactions
     {
         protected override void PerformInteract()
         {
-            Debug.Log($"I am {Name}");
+            Debug.Log($"I am {interactionData.displayName}");
         }
     }
 }

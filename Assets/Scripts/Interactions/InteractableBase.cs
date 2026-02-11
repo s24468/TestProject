@@ -1,23 +1,25 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 namespace Interactions
 {
     public abstract class InteractableBase : MonoBehaviour
     {
         [Header("Attributes")] [SerializeField]
-        public string Name = "Interactable";
+        public InteractionData interactionData;
+
 
         [Header("Interaction")] [SerializeField]
         private bool isEnabled = true;
 
-        [Header("Events")] public UnityEvent OnFocusEnter;
-        public UnityEvent OnFocusExit;
-        public UnityEvent OnInteracted;
-
         private bool _isFocused = false;
 
+
         protected abstract void PerformInteract();
+
         public void FocusEnter()
         {
             if (_isFocused)
@@ -26,7 +28,6 @@ namespace Interactions
             }
 
             _isFocused = true;
-            OnFocusEnter?.Invoke();
         }
 
         public void FocusExit()
@@ -37,7 +38,6 @@ namespace Interactions
             }
 
             _isFocused = false;
-            OnFocusExit?.Invoke();
         }
 
         public void Interact()
@@ -48,7 +48,6 @@ namespace Interactions
             }
 
             PerformInteract();
-            OnInteracted?.Invoke();
         }
     }
 }

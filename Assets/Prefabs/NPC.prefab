@@ -1587,17 +1587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1beae81abe584fa2ad8ab44d3f3adc9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
-  Name: Bob
+  interactionData: {fileID: 11400000, guid: c9ad295e350ef3b46a6f86942e21c1d0, type: 2}
   isEnabled: 1
-  OnFocusEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFocusExit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInteracted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &150898783910130349
 MonoBehaviour:
   m_ObjectHideFlags: 0
